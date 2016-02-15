@@ -1,0 +1,62 @@
+{
+  "name": "linter-gfortran",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "Lint Fortran source files using gfortran",
+  "keywords": [
+    "lint",
+    "linter",
+    "fortran",
+    "gfortran",
+    "error"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Luthaf/linter-gfortran"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "consumedServices": {
+    "linter-indie": {
+      "versions": {
+        "1.0.0": "consumeLinter"
+      }
+    }
+  },
+  "dependencies": {
+    "atom-linter": "=4.3.4",
+    "atom-package-deps": "^2.0.1",
+    "shelljs": "^0.5.0",
+    "fs-extra": "^0.26.1",
+    "tempfile": "^1.1.0",
+    "split-string": "^0.1.0"
+  },
+  "package-deps": [
+    "linter"
+  ],
+  "devDependencies": {
+    "eslint": "latest"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    },
+    "ecmaFeatures": {
+      "modules": true
+    },
+    "globals": {
+      "atom": true
+    }
+  }
+}
