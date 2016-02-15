@@ -1,7 +1,7 @@
 {
   "name": "linter-gfortran",
   "main": "./lib/main",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Lint Fortran source files using gfortran",
   "keywords": [
     "lint",
