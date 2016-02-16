@@ -10,9 +10,12 @@ describe('The Fortran provider for AtomLinter', () => {
             atom.config.set('linter-gfortran.execPath', 'gfortran');
             atom.config.set('linter-gfortran.gfortranDefaultFlags', '-fsyntax-only -Wall -Wextra');
             atom.config.set('linter-gfortran.gfortranLintOnTheFly', false);
-            main.messages={};
             return atom.packages.activatePackage('linter-gfortran')
         })
+    })
+
+    afterEach(() => {
+        main.messages={};
     })
 
     it('finds one error in error.f95', () => {
@@ -20,6 +23,7 @@ describe('The Fortran provider for AtomLinter', () => {
             filename = __dirname + '/files/error.f95'
             return atom.workspace.open(filename).then(editor => {
                 main.lint(editor, editor.getPath(), editor.getPath()).then(function(){
+                    console.log(main.messages);
                     var length = utility.flattenHash(main.messages).length
                     expect(length).toEqual(1);
                 })
@@ -32,6 +36,20 @@ describe('The Fortran provider for AtomLinter', () => {
             filename = __dirname + '/files/comment.f95'
             return atom.workspace.open(filename).then(editor => {
                 main.lint(editor, editor.getPath(), editor.getPath()).then(function(){
+                    console.log(main.messages);
+                    var length = utility.flattenHash(main.messages).length
+                    expect(length).toEqual(0);
+                })
+            })
+        })
+    })
+
+    it('Handle modules', () => {
+        waitsForPromise(() => {
+            filename = __dirname + '/files/module.f95'
+            return atom.workspace.open(filename).then(editor => {
+                main.lint(editor, editor.getPath(), editor.getPath()).then(function(){
+                    console.log(main.messages);
                     var length = utility.flattenHash(main.messages).length
                     expect(length).toEqual(0);
                 })

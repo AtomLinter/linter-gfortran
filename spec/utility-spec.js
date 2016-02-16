@@ -8,11 +8,10 @@ describe('Utility functions', () => {
             atom.config.set('linter-gfortran.execPath', 'gfortran');
             atom.config.set('linter-gfortran.gfortranDefaultFlags', '-fsyntax-only -Wall -Wextra');
             atom.config.set('linter-gfortran.gfortranLintOnTheFly', false);
-
-            atom.packages.activatePackage("language-javascript");
             atom.packages.activatePackage('linter-gfortran');
+            atom.packages.activatePackage("language-javascript");
             return atom.packages.activatePackage("language-fortran");
-        })
+        });
     })
 
     it('returns an editor for a Fortran file', () => {
