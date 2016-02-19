@@ -1,4 +1,4 @@
 module mymodule
     implicit none
-
-end module
+    integer :: a, b, c
+end module mymodule
