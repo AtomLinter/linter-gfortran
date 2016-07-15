@@ -23,7 +23,7 @@
     "atom-package-deps": "^4.0.1",
     "tmp": "^0.0.28"
   },
-  "packages-deps": [
+  "package-deps": [
     "linter"
   ],
   "eslintConfig": {
