@@ -9,7 +9,17 @@
   },
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=1.4.0 <2.0.0"
+  },
+  "configSchema": {
+    "executable": {
+      "type": "string",
+      "default": "gfortran"
+    },
+    "gfortran_flags": {
+      "type": "string",
+      "default": "-Wall -Wextra"
+    }
   },
   "providedServices": {
     "linter": {
