@@ -13,7 +13,7 @@ defaults: &defaults
         command: |
           sudo apt-get update && \
           sudo apt-get install --assume-yes --quiet --no-install-suggests \
-            --no-install-recommends gfortran-5
+            --no-install-recommends gfortran
     - run:
         name: Create VFB for Atom to run in
         command: /usr/local/bin/xvfb_start
