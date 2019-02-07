@@ -7,6 +7,7 @@ jobs:
         environment:
           DISPLAY: ":99"
     steps:
+      - run: sed -i -re 's/([a-z]{2}\.)?archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
       - run: apt-get update
       # Install some pre-requisite packages and missing dependencies from the atom package
       - run: apt-get --assume-yes --quiet install curl sudo gfortran-5 libxss1 libasound2 xvfb
