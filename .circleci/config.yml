@@ -44,7 +44,7 @@ defaults: &defaults
     - save_cache:
         paths:
           - node_modules
-        key: v1-dependencies-{{ checksum "package.json" }}
+        key: v1-dependencies-{{ .Branch }}-{{ checksum "package.json" }}-{{ checksum "package-lock.json"}}
 
 jobs:
   checkout_code:
