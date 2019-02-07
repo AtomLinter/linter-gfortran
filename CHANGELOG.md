@@ -1,3 +1,7 @@
+## 0.6.0 - 2019:02:07
+* Bump minimum Atom version (#17)
+* Support Linter v2 API (#23)
+
 ## 0.5.0 - 2017:05:02
 * Try to fix linting under windows (#15)
 
