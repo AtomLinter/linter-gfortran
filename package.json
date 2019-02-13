@@ -34,9 +34,9 @@
     "test": "atom --test spec"
   },
   "dependencies": {
-    "atom-linter": "^10.0.0",
-    "atom-package-deps": "^5.0.0",
-    "tmp": "^0.0.28"
+    "atom-linter": "10.0.0",
+    "atom-package-deps": "5.0.0",
+    "tmp": "0.0.28"
   },
   "package-deps": [
     "linter:2.0.0"
@@ -78,8 +78,8 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^4.6.0",
-    "eslint-config-airbnb-base": "^12.0.0",
-    "eslint-plugin-import": "^2.7.0"
+    "eslint": "4.19.1",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-plugin-import": "2.16.0"
   }
 }
