@@ -1,6 +1,7 @@
 {
   "name": "linter-gfortran",
   "main": "./lib/main",
+  "private": true,
   "version": "1.0.0",
   "description": "Lint Fortran files using gfortran",
   "repository": {
@@ -60,6 +61,21 @@
       "node": true,
       "browser": true
     }
+  },
+  "renovate": {
+    "extends": [
+      "config:base"
+    ],
+    "semanticCommits": true,
+    "rangeStrategy": "pin",
+    "packageRules": [
+      {
+        "packagePatterns": [
+          "^eslint"
+        ],
+        "groupName": "ESLint packages"
+      }
+    ]
   },
   "devDependencies": {
     "eslint": "^4.6.0",
